@@ -13,7 +13,7 @@ Get a phone cord with RJ10 plug and connect pin as follows:
 
 The order of RJ10 pins is the same as in the computer connector:
 
-![RJ10 pinout](doc/mac-plus-keyboard-pinout.png)
+<img src="https://github.com/trekawek/mac-plus-ps2/raw/master/doc/mac-plus-keyboard-pinout.png" width="50%">
 
 ## Connecting to PS/2 keyboard
 
