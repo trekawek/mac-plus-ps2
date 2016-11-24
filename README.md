@@ -28,7 +28,7 @@ For the Mini-DIN 6 plug, pins should be connected as follows:
 
 Pinout for the female connector from front (copied from [Wikipedia](https://en.wikipedia.org/wiki/PS/2_port)):
 
-<img src="https://github.com/trekawek/mac-plus-ps2/raw/master/doc/minidin6-pinout.png" width="50%">
+<img src="https://github.com/trekawek/mac-plus-ps2/raw/master/doc/minidin6-pinout.png" width="25%">
 
 ## References
  
