@@ -34,4 +34,4 @@ Pinout for the female connector from front (copied from [Wikipedia](https://en.w
  
 * [Similar project based on stm32f0discovery kit](http://www.synack.net/~bbraun/mackbd/index.html),
 * [Mac Plus technical information](http://www.mac.linux-m68k.org/devel/plushw.php) - contains the description of the protocol,
-* [Mac Plus scancodes](http://m0115.web.fc2.com/m0110a.jpg).
+* [Mac Plus scancodes](https://github.com/altercation/tmk_firrmware_hhkb_teensy2/blob/master/protocol/m0110.c).
