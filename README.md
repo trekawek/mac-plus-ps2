@@ -6,10 +6,10 @@ This sketch allows to use a PS/2 keyboard with the Macintosh Plus. Mapping betwe
 
 Get a phone cord with RJ10 plug and connect pin as follows:
 
-1. +5V,
-2. pin 5,
-3. pin 6,
-4. GND.
+1. Vcc -> +5V
+2. +DATA -> pin 5,
+3. +CLK -> pin 6,
+4. GND -> GND.
 
 The order of RJ10 pins is the same as in the computer connector:
 
@@ -19,9 +19,19 @@ The order of RJ10 pins is the same as in the computer connector:
 
 For the Mini-DIN 6 plug, pins should be connected as follows:
 
-1. pin 2,
+1. +DATA -> pin 2,
 2. -,
-3. GND,
-4. +5V,
-5. pin 6,
+3. GND -> GND,
+4. Vcc -> +5V,
+5. +CLK -> pin 3,
 6. -
+
+Pinout for the female connector from front (copied from [Wikipedia](https://en.wikipedia.org/wiki/PS/2_port)):
+
+<img src="https://github.com/trekawek/mac-plus-ps2/raw/master/doc/minidin6-pinout.png" width="50%">
+
+## References
+ 
+* [Similar project based on stm32f0discovery kit](http://www.synack.net/~bbraun/mackbd/index.html),
+* [Mac Plus technical information](http://www.mac.linux-m68k.org/devel/plushw.php) - contains the description of the protocol,
+* [Mac Plus scancodes](http://m0115.web.fc2.com/m0110a.jpg).
