@@ -1,5 +1,5 @@
 void initScancodes() {
-  for (byte i = 0; i < 256; i++) {
+  for (int i = 0; i < 256; i++) {
     scanCodesTable[i] = NULL_TRANSITION;
     extScanCodesTable[i] = NULL_TRANSITION;
   }

@@ -14,16 +14,27 @@ byte extScanCodesTable[256];
 
 void setup() {
   initScancodes();
-  
+
   keyboard.begin(PS2_DATA_PIN, PS2_CLOCK_PIN);
-  
+
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(MAC_CLOCK_PIN, OUTPUT);
   pinMode(MAC_DATA_PIN, INPUT_PULLUP);
-  
-  while (digitalRead(MAC_DATA_PIN) != LOW);
 
+  waitForInitSignal();
   delayMicroseconds(180);
+}
+
+void waitForInitSignal() {
+  unsigned long t = millis();
+  boolean led = false;
+  while (digitalRead(MAC_CLOCK_PIN) != LOW) {
+    if (millis() - t > 100) {
+      t = millis();
+      led = !led;
+      digitalWrite(LED_BUILTIN, led);
+    }
+  }
 }
 
 void loop() {
@@ -73,7 +84,7 @@ byte readByte() {
     b = (b << 1) | digitalRead(MAC_DATA_PIN);
     delayMicroseconds(180);
   }
-  
+
   return b;
 }
 
