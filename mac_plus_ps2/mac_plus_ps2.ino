@@ -12,6 +12,7 @@
 #define MAC_CLOCK_PIN 6
 
 #define NULL_TRANSITION 0x7b
+#define CAPS_LOCK       0x73
 
 PS2Keyboard keyboard;
 unsigned int scanCodesTable[256];
@@ -24,7 +25,6 @@ void setup() {
   initScancodes();
 
   keyboard.begin(PS2_DATA_PIN, PS2_CLOCK_PIN);
-  //debug();
 
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(MAC_CLOCK_PIN, OUTPUT);
@@ -72,7 +72,7 @@ byte readCmd() {
   delayMicroseconds(20);
   
   while (digitalRead(MAC_DATA_PIN) != LOW);
-  delayMicroseconds(400);
+  delayMicroseconds(400); // this is apparently required so we don't lose the first digit
   byte cmd = readByte();
   while (digitalRead(MAC_DATA_PIN) != HIGH);
   
@@ -162,14 +162,30 @@ unsigned int getExtendedTransition() {
   }
 }
 
+boolean capsLockPressed = false;
+
 unsigned int translate(byte scanCode, boolean extended, boolean released) {
   unsigned int translated = extended ? extScanCodesTable[scanCode] : scanCodesTable[scanCode];
   if (translated == NULL_TRANSITION) {
     return NULL_TRANSITION;
   } else if (released) {
-    return translated | 0x80;
+    if (translated == CAPS_LOCK) {
+      return handleCapsLockRelease();
+    } else {
+      return translated | 0x80;
+    }
   } else {
     return translated;
+  }
+}
+
+unsigned int handleCapsLockRelease() {
+  if (capsLockPressed) {
+    capsLockPressed = false;
+    return CAPS_LOCK | 0x80;
+  } else {
+    capsLockPressed = true;
+    return NULL_TRANSITION;
   }
 }
 
