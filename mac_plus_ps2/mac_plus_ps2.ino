@@ -66,6 +66,7 @@ void loop() {
   }
 }
 
+// reads the command, operates the diagnostic LED and switches pin mode back to OUTPUT
 byte readCmd() {
   digitalWrite(LED_BUILTIN, LOW);
   pinMode(MAC_DATA_PIN, INPUT_PULLUP);
@@ -162,8 +163,6 @@ unsigned int getExtendedTransition() {
   }
 }
 
-boolean capsLockPressed = false;
-
 unsigned int translate(byte scanCode, boolean extended, boolean released) {
   unsigned int translated = extended ? extScanCodesTable[scanCode] : scanCodesTable[scanCode];
   if (translated == NULL_TRANSITION) {
@@ -178,6 +177,8 @@ unsigned int translate(byte scanCode, boolean extended, boolean released) {
     return translated;
   }
 }
+
+boolean capsLockPressed = false;
 
 unsigned int handleCapsLockRelease() {
   if (capsLockPressed) {

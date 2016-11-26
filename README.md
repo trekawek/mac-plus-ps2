@@ -19,11 +19,11 @@ The order of RJ10 pins is the same as in the computer connector:
 
 For the Mini-DIN 6 plug, pins should be connected as follows:
 
-1. +DATA -> pin 2,
+1. +DATA -> pin 3,
 2. -,
 3. GND -> GND,
 4. Vcc -> +5V,
-5. +CLK -> pin 3,
+5. +CLK -> pin 2,
 6. -
 
 Pinout for the female connector from front (copied from [Wikipedia](https://en.wikipedia.org/wiki/PS/2_port)):
@@ -34,4 +34,4 @@ Pinout for the female connector from front (copied from [Wikipedia](https://en.w
  
 * [Similar project based on stm32f0discovery kit](http://www.synack.net/~bbraun/mackbd/index.html),
 * [Mac Plus technical information](http://www.mac.linux-m68k.org/devel/plushw.php) - contains the description of the protocol,
-* [Mac Plus scancodes](https://github.com/altercation/tmk_firrmware_hhkb_teensy2/blob/master/protocol/m0110.c).
+* [Mac Plus keyboard rawcodes](https://github.com/altercation/tmk_firrmware_hhkb_teensy2/blob/master/protocol/m0110.c).
