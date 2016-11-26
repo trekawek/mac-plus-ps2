@@ -6,7 +6,7 @@ This sketch allows to use a PS/2 keyboard with the Macintosh Plus. Mapping betwe
 
 Get a phone cord with RJ10 plug and connect pin as follows:
 
-1. Vcc -> +5V
+1. Vcc -> Vin
 2. +DATA -> pin 5,
 3. +CLK -> pin 6,
 4. GND -> GND.
@@ -33,5 +33,5 @@ Pinout for the female connector from front (copied from [Wikipedia](https://en.w
 ## References
  
 * [Similar project based on stm32f0discovery kit](http://www.synack.net/~bbraun/mackbd/index.html),
-* [Mac Plus technical information](http://www.mac.linux-m68k.org/devel/plushw.php) - contains the description of the protocol,
+* [Mac Hardware Info](ftp://ftp.apple.asimov.net/pub/apple_II/documentation/macintosh/Mac%20Hardware%20Info%20-%20Mac%20128K.pdf) - contains the description of the protocol,
 * [Mac Plus keyboard rawcodes](https://github.com/altercation/tmk_firrmware_hhkb_teensy2/blob/master/protocol/m0110.c).
