@@ -2,6 +2,8 @@
 
 This sketch allows to use a PS/2 keyboard with the Macintosh Plus. Mapping between PS/2 keys and Mac keys is stored in the [keymap.ino](mac_plus_ps2/keymap.ino) file. Sketch uses a modified version of the [PS2Keyboard Library](http://www.pjrc.com/teensy/td_libs_PS2Keyboard.html) --- all the logic except `getScanCode()` method have been stripped.
 
+<img src="https://github.com/trekawek/mac-plus-ps2/raw/master/doc/arduino-ps2.jpg" width="50%">
+
 ## Connecting to Macintosh Plus
 
 Get a phone cord with RJ10 plug and connect pin as follows:
