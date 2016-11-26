@@ -73,12 +73,12 @@ void initScancodes() {
   extScanCodesTable[0x1f] = 0x6f; // left windows -> cmd
   extScanCodesTable[0x8b] = 0x6f; // left windows -> cmd
   
-  extScanCodesTable[0x5c] = 0x6f; // right windows
-  extScanCodesTable[0x27] = 0x6f; // right windows
-  extScanCodesTable[0x8c] = 0x6f; // right windows
+  extScanCodesTable[0x5c] = 0x6f; // right windows -> cmd
+  extScanCodesTable[0x27] = 0x6f; // right windows -> cmd
+  extScanCodesTable[0x8c] = 0x6f; // right windows -> cmd
   
-  scanCodesTable[0x77] = 0x0f | NUMPAD;             // numlock -> numpad clear
-  extScanCodesTable[0x71] = 0x0f | NUMPAD;          // delete -> numpad clear
+  scanCodesTable[0x77] = 0x0f | NUMPAD;    // numlock -> numpad clear
+  extScanCodesTable[0x71] = 0x0f | NUMPAD; // delete -> numpad clear
   extScanCodesTable[0x75] = 0x1b | NUMPAD; // up arrow
   extScanCodesTable[0x6b] = 0x0d | NUMPAD; // left arrow
   extScanCodesTable[0x72] = 0x11 | NUMPAD; // down arrow
