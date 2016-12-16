@@ -35,5 +35,5 @@ Pinout for the female connector from front (copied from [Wikipedia](https://en.w
 ## References
  
 * [Similar project based on stm32f0discovery kit](http://www.synack.net/~bbraun/mackbd/index.html),
-* [Mac Hardware Info](ftp://ftp.apple.asimov.net/pub/apple_II/documentation/macintosh/Mac%20Hardware%20Info%20-%20Mac%20128K.pdf) - contains the description of the protocol,
+* Mac Hardware Info (ftp://ftp.apple.asimov.net/pub/apple_II/documentation/macintosh/Mac%20Hardware%20Info%20-%20Mac%20128K.pdf) - contains the description of the protocol,
 * [Mac Plus keyboard rawcodes](https://github.com/altercation/tmk_firrmware_hhkb_teensy2/blob/master/protocol/m0110.c).
