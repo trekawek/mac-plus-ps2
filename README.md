@@ -9,8 +9,8 @@ This sketch allows to use a PS/2 keyboard with the Macintosh Plus. Mapping betwe
 Get a phone cord with RJ10 plug and connect pin as follows:
 
 1. Vcc -> Vin
-2. +DATA -> pin 5,
-3. +CLK -> pin 6,
+2. +DATA -> pin D5,
+3. +CLK -> pin D6,
 4. GND -> GND.
 
 The order of RJ10 pins is the same as in the computer connector:
@@ -21,12 +21,12 @@ The order of RJ10 pins is the same as in the computer connector:
 
 For the Mini-DIN 6 plug, pins should be connected as follows:
 
-1. +DATA -> pin 3,
-2. -,
+1. +DATA -> pin D3,
+2. (not connected),
 3. GND -> GND,
 4. Vcc -> +5V,
-5. +CLK -> pin 2,
-6. -
+5. +CLK -> pin D2,
+6. (not connected)
 
 Pinout for the female connector from front (copied from [Wikipedia](https://en.wikipedia.org/wiki/PS/2_port)):
 
