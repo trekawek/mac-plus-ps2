@@ -8,14 +8,14 @@ This sketch allows to use a PS/2 keyboard with the Macintosh Plus. Mapping betwe
 
 Get a phone cord with RJ10 plug and connect pin as follows:
 
-1. Vcc -> Vin
-2. +DATA -> pin D5,
-3. +CLK -> pin D6,
-4. GND -> GND.
+1. GND -> GND.
+2. +CLK -> pin D6,
+3. +DATA -> pin D5,
+4. Vcc -> Vin
 
 #### Connecting to PS/2 keyboard
 
-For the Mini-DIN 6 socket, pins should be connected as follows:
+For the Mini-DIN 6 socket, pins should be connected as follows (the diagram presents the female socket):
 
 1. +DATA -> pin D3,
 2. (not connected),
