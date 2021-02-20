@@ -6,7 +6,7 @@ This sketch allows to use a PS/2 keyboard with the Macintosh Plus. Mapping betwe
 
 #### Connecting to Macintosh Plus
 
-Get a phone cord with RJ10 plug and connect pin as follows:
+Get a phone cord with RJ10 plug and connect pin as follows (pin 1 of the phone jack is on the left when the wire side is facing toward you):
 
 1. GND -> GND.
 2. +CLK -> pin D6,
