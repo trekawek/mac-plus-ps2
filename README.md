@@ -13,6 +13,9 @@ Get a phone cord with RJ10 plug and connect pin as follows (pin 1 of the phone j
 3. +DATA -> pin D5,
 4. Vcc -> Vin
 
+> [!NOTE]
+> Mac Pin 4 (Vcc) can be connected directly to the 5V pin on the Arduino, sharing the same power rail as the PS/2 keyboard. This bypasses the Arduino's internal voltage regulator, ensuring the keyboard receives full power. Connecting via the Arduino Vin pin may cause a voltage drop that leaves the keyboard underpowered (see [issue #7](https://github.com/trekawek/mac-plus-ps2/issues/7)).
+
 #### Connecting to PS/2 keyboard
 
 For the Mini-DIN 6 socket, pins should be connected as follows (the diagram presents the female socket):
