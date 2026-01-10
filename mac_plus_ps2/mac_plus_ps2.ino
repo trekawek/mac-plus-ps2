@@ -30,20 +30,7 @@ void setup() {
   pinMode(MAC_CLOCK_PIN, OUTPUT);
   pinMode(MAC_DATA_PIN, INPUT_PULLUP);
   
-  waitForInitSignal();
   delayMicroseconds(180);
-}
-
-void waitForInitSignal() {
-  unsigned long t = millis();
-  boolean led = false;
-  while (digitalRead(MAC_CLOCK_PIN) != LOW) {
-    if (millis() - t > 100) {
-      t = millis();
-      led = !led;
-      digitalWrite(LED_BUILTIN, led);
-    }
-  }
 }
 
 void loop() {
